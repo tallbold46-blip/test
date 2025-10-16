@@ -1,0 +1,3 @@
+while wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("AddStaminaEvent"):FireServer()
+end
