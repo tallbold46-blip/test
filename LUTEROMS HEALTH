@@ -1,0 +1,19 @@
+local toggle = false
+
+local function toggleHealing()
+    toggle = not toggle
+end
+
+spawn(function()
+    while true do
+        if toggle then
+            local args = {
+                "GiveHealthCuzPro",
+                2,
+                1
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Lutero"):FireServer(unpack(args))
+        end
+        wait(0.1)
+    end
+end)
